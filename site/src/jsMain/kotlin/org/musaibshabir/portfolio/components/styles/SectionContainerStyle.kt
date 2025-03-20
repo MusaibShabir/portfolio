@@ -1,4 +1,4 @@
-package org.musaibshabir.website.components.styles
+package org.musaibshabir.portfolio.components.styles
 
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.classNames

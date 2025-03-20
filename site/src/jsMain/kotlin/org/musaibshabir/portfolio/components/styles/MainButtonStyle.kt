@@ -1,4 +1,4 @@
-package org.musaibshabir.website.components.styles
+package org.musaibshabir.portfolio.components.styles
 
 import com.varabyte.kobweb.compose.css.Transition
 import com.varabyte.kobweb.compose.css.TransitionProperty

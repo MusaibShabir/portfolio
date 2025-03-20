@@ -8,7 +8,7 @@ plugins {
     alias(libs.plugins.kobwebx.markdown)
 }
 
-group = "org.musaibshabir.website"
+group = "org.musaibshabir.portfolio"
 version = "1.0-SNAPSHOT"
 
 kobweb {

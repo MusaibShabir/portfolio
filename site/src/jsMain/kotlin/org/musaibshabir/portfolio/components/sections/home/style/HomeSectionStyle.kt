@@ -1,4 +1,4 @@
-package org.musaibshabir.website.components.sections.home.style
+package org.musaibshabir.portfolio.components.sections.home.style
 
 import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.ui.Modifier
@@ -10,7 +10,7 @@ import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.extendedBy
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.vh
-import org.musaibshabir.website.components.styles.SectionContainerStyle
+import org.musaibshabir.portfolio.components.styles.SectionContainerStyle
 
 val HeroSectionStyle = SectionContainerStyle.extendedBy{
 

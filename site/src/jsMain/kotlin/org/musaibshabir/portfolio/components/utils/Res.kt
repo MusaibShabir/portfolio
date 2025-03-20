@@ -1,4 +1,4 @@
-package org.musaibshabir.website.utils
+package org.musaibshabir.portfolio.components.utils
 
 import com.varabyte.kobweb.compose.ui.graphics.Color
 

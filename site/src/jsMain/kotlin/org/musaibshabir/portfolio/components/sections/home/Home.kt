@@ -1,4 +1,4 @@
-package org.musaibshabir.website.components.sections.home
+package org.musaibshabir.portfolio.components.sections.home
 
 
 import androidx.compose.runtime.Composable
@@ -22,16 +22,15 @@ import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.s
 import org.jetbrains.compose.web.dom.Div
 import org.musaibshabir.portfolio.SitePalette
-import org.musaibshabir.website.SitePalette
-import org.musaibshabir.website.SubheadlineTextStyle
-import org.musaibshabir.website.components.HeroContainerKeyFrames
-import org.musaibshabir.website.components.UserNameStyle
-import org.musaibshabir.website.components.UsersMessageStyle
-import org.musaibshabir.website.components.sections.home.components.SocialLinksRow
-import org.musaibshabir.website.components.sections.home.style.HelloImStyle
-import org.musaibshabir.website.components.sections.home.style.HeroSectionStyle
-import org.musaibshabir.website.components.styles.MainButtonStyle
-import org.musaibshabir.website.utils.Res
+import org.musaibshabir.portfolio.SubheadlineTextStyle
+import org.musaibshabir.portfolio.components.HeroContainerKeyFrames
+import org.musaibshabir.portfolio.components.UserNameStyle
+import org.musaibshabir.portfolio.components.UsersMessageStyle
+import org.musaibshabir.portfolio.components.sections.home.components.SocialLinksRow
+import org.musaibshabir.portfolio.components.sections.home.style.HelloImStyle
+import org.musaibshabir.portfolio.components.sections.home.style.HeroSectionStyle
+import org.musaibshabir.portfolio.components.styles.MainButtonStyle
+import org.musaibshabir.portfolio.components.utils.Res
 
 @Composable
 fun Home(

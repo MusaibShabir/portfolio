@@ -16,7 +16,6 @@ import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import com.varabyte.kobweb.silk.theme.colors.loadFromLocalStorage
 import com.varabyte.kobweb.silk.theme.colors.saveToLocalStorage
 import com.varabyte.kobweb.silk.theme.colors.systemPreference
-import kotlinx.browser.localStorage
 import org.jetbrains.compose.web.css.vh
 
 private const val COLOR_MODE_KEY = "portfolio:colorMode"
