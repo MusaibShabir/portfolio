@@ -8,6 +8,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import org.musaibshabir.portfolio.components.layouts.DefaultPageLayout
+import org.musaibshabir.portfolio.components.sections.about.About
 import org.musaibshabir.portfolio.toSitePalette
 import org.musaibshabir.portfolio.components.sections.home.Home
 
@@ -26,7 +27,7 @@ fun HomePage() {
 
             Home(currentPalette = currentPalette)
 
-            //About()
+            About()
 
             //SkillsAndTools()
         }
