@@ -61,16 +61,21 @@ object Res {
         const val COMPOSE_LOGO = "images/Skills/compose.svg"
         const val JAVA_LOGO = "images/Skills/java.svg"
         const val CPP_LOGO = "images/Skills/cpp.svg"
-        const val JETPACK_LOGO = "images/Skills/jetpack.svg"
-        const val PYTHON_LOGO = "images/Skills/python.svg"
+        const val JETPACK_LIGHT_LOGO = "images/Skills/jetpack_light.svg"
+        const val JETPACK_DARK_LOGO = "images/Skills/jetpack_dark.svg"
         const val KTOR_LOGO = "images/Skills/ktor.svg"
         const val FIREBASE_LOGO = "images/Skills/firebase.svg"
-        const val MARKDOWN_LOGO = "images/Skills/Markdown.svg"
-        const val ANDROID_LOGO = "images/Tools/Android.svg"
+        const val GITHUB_DARK_LOGO = "images/Skills/github_dark.svg"
+        const val GITHUB_LIGHT_LOGO = "images/Skills/github_light.svg"
+        const val GRADLE_DARK_LOGO = "images/Skills/gradle_dark.svg"
+        const val GRADLE_LIGHT_LOGO = "images/Skills/gradle_light.svg"
+        const val GIT_LOGO = "images/Skills/git.svg"
         const val FIGMA_LOGO = "images/Tools/figma.svg"
-        const val GIT_LOGO = "images/Tools/Git.svg"
-        const val GITHUB_DARK_LOGO = "images/Tools/github_dark.svg"
-        const val GITHUB_LIGHT_LOGO = "images/Tools/github_light.svg"
+        const val PYTHON_LOGO = "images/Skills/python.svg"
+        const val MARKDOWN_LIGHT_LOGO = "images/Skills/markdown_light.svg"
+        const val MARKDOWN_DARK_LOGO = "images/Skills/markdown_dark.svg"
+
+
 
 
         // Socials
@@ -102,11 +107,12 @@ object Res {
         const val PROJECT_READBUD = "images/Projects/Project_ReadBud.png"
     }
 
-    object Fonts {
-        const val Space_Grotesk = "Space Grotesk"
-        const val Tauri = "Tauri"
-        const val DM_SANS = "DM Sans"
+    object FontFamilies {
+        const val POPPINS_REGULAR = "PoppinsRegular"
+        const val POPPINS_MEDIUM = "PoppinsMedium"
     }
+
+
 
     object Colors {
         val FOOTER_COLOR_LIGHT = Color.Companion.rgb(0xF1F1F1)

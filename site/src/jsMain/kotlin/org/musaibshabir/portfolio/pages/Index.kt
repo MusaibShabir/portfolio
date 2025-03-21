@@ -11,6 +11,7 @@ import org.musaibshabir.portfolio.components.layouts.DefaultPageLayout
 import org.musaibshabir.portfolio.components.sections.about.About
 import org.musaibshabir.portfolio.toSitePalette
 import org.musaibshabir.portfolio.components.sections.home.Home
+import org.musaibshabir.portfolio.components.sections.skills.Skills
 
 @Page
 @Composable
@@ -29,7 +30,7 @@ fun HomePage() {
 
             About()
 
-            //SkillsAndTools()
+            Skills()
         }
     }
 
