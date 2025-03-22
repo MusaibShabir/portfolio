@@ -6,29 +6,18 @@ import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
-import com.varabyte.kobweb.compose.ui.modifiers.color
-import com.varabyte.kobweb.compose.ui.modifiers.fontFamily
-import com.varabyte.kobweb.compose.ui.modifiers.fontWeight
-import com.varabyte.kobweb.compose.ui.modifiers.margin
-import com.varabyte.kobweb.compose.ui.modifiers.padding
-import com.varabyte.kobweb.compose.ui.modifiers.size
-import com.varabyte.kobweb.compose.ui.styleModifier
+import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.toAttrs
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
-import com.varabyte.kobweb.silk.theme.colors.ColorPalette
-import com.varabyte.kobweb.silk.theme.colors.ColorPalettes
-import com.varabyte.kobweb.silk.theme.colors.palette.color
-import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
 import org.musaibshabir.portfolio.SubheadlineTextStyle
 import org.musaibshabir.portfolio.components.SectionTitleStyle
 import org.musaibshabir.portfolio.components.utils.Res
-import org.musaibshabir.portfolio.initColorMode
 
 @Composable
 fun SectionTitle(

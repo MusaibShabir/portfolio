@@ -24,7 +24,7 @@ fun DefaultPageLayout(
             .fillMaxSize()
             //.padding(leftRight = 2.cssRem)
         ,
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         NavHeader()
         content()

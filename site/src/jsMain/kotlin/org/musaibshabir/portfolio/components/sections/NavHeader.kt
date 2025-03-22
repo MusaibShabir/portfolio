@@ -2,11 +2,12 @@ package org.musaibshabir.portfolio.components.sections
 
 import androidx.compose.runtime.*
 import com.varabyte.kobweb.browser.dom.ElementTarget
+import com.varabyte.kobweb.compose.css.functions.blur
 import com.varabyte.kobweb.compose.css.functions.clamp
+import com.varabyte.kobweb.compose.css.functions.saturate
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
-import com.varabyte.kobweb.compose.foundation.layout.Spacer
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
@@ -31,12 +32,22 @@ import com.varabyte.kobweb.silk.style.breakpoint.displayIfAtLeast
 import com.varabyte.kobweb.silk.style.breakpoint.displayUntil
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
+import com.varabyte.kobweb.silk.theme.colors.palette.background
+import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
 import org.jetbrains.compose.web.css.*
 import org.musaibshabir.portfolio.components.widgets.IconButton
 import org.musaibshabir.portfolio.toSitePalette
 
 val NavHeaderStyle = CssStyle.base {
-    Modifier.fillMaxWidth().padding(1.cssRem)
+    val colorPalette = colorMode.toPalette()
+    Modifier
+        .fillMaxWidth()
+        .padding(1.cssRem)
+        .backgroundColor(colorPalette.background.toRgb().copyf(alpha = 0.8f))
+        .position(Position.Sticky)
+        .top(0.percent)
+        .backdropFilter(saturate(180.percent), blur(8.px))
+        .display(DisplayStyle.Flex)
 }
 
 @Composable
@@ -102,20 +113,26 @@ fun NavHeader() {
     Row(
         NavHeaderStyle.toModifier(),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.Center
     ) {
-
-
-        Spacer()
-
         Row(
             Modifier
+                .fillMaxWidth()
                 .gap(1.5.cssRem)
                 .displayIfAtLeast(Breakpoint.MD),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
         ) {
             MenuItems()
+        }
+
+        Row(
+            Modifier
+                .gap(1.5.cssRem)
+                .displayIfAtLeast(Breakpoint.MD),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.End
+        ) {
+
             ColorModeButton()
         }
 
