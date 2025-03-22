@@ -14,6 +14,7 @@ import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.px
 import org.musaibshabir.portfolio.components.styles.SocialLinkStyle
+import org.musaibshabir.portfolio.components.utils.Res
 import org.musaibshabir.portfolio.components.widgets.LinkButton
 
 @Composable
@@ -23,27 +24,32 @@ fun SocialLinksRow() {
             .borderRadius(1.cssRem)
     ) {
         SocialLinkButton(
-            "https://github.com/MusaibShabir"
+            Res.Constants.GITHUB_URL
         ) { FaGithub(size = IconSize.XXL) }
 
         SocialLinkButton(
-            "https://www.linkedin.com/in/musaibshabir"
+            Res.Constants.LINKEDIN_URL
+
         ) { FaLinkedin(size = IconSize.XXL) }
 
         SocialLinkButton(
-            "https://x.com/musaib_shabir"
+            Res.Constants.TWITTER_URL
+
         ) { FaXTwitter(size = IconSize.XXL) }
 
         SocialLinkButton(
-            "https://www.hackerrank.com/profile/musaibshabir"
+            Res.Constants.HACKER_RANK_URL
+
         ) { FaHackerrank(size = IconSize.XXL) }
 
         SocialLinkButton(
-            "https://medium.com/@musaib.shabir"
+            Res.Constants.MEDIUM_URL
+
         ) { FaMedium(size = IconSize.XXL) }
 
         SocialLinkButton(
-            "mailto:itzmusaibshabir@gmail.com"
+            Res.Constants.MAIL_TO
+
         ) { FaEnvelope(size = IconSize.XXL) }
     }
 }

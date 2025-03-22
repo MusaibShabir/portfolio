@@ -6,11 +6,11 @@ object Res {
 
     object Constants {
 
-        const val GITHUB_URL = "https://github.com/binayshaw7777"
-        const val LINKEDIN_URL = "https://www.linkedin.com/in/binayshaw7777/"
-        const val TWITTER_URL = "https://twitter.com/binayplays7777"
-        const val HACKER_RANK_URL = "https://twitter.com/binayplays7777"
-        const val MEDIUM_URL = "https://twitter.com/binayplays7777"
+        const val GITHUB_URL = "https://github.com/MusaibShabir"
+        const val LINKEDIN_URL = "https://www.linkedin.com/in/musaibshabir"
+        const val TWITTER_URL = "https://x.com/musaib_shabir"
+        const val HACKER_RANK_URL = "https://www.hackerrank.com/profile/musaibshabir"
+        const val MEDIUM_URL =  "https://medium.com/@musaib.shabir"
         const val MAIL_TO = "mailto:itzmusaibshabir@gmail.com"
 
         const val RESUME_URL = "https://drive.google.com/file/d/11M1RPYv3xNdwc88zEVvHVPVSrb5G9Fna/view?usp=drive_link"
