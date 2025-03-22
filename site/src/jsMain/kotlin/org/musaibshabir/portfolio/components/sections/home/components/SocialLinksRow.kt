@@ -13,8 +13,8 @@ import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.px
-import org.musaibshabir.portfolio.components.widgets.LinkButton
 import org.musaibshabir.portfolio.components.styles.SocialLinkStyle
+import org.musaibshabir.portfolio.components.widgets.LinkButton
 
 @Composable
 fun SocialLinksRow() {
@@ -49,7 +49,7 @@ fun SocialLinksRow() {
 }
 
 @Composable
-private fun SocialLinkButton(url: String, icon: @Composable () -> Unit) {
+internal fun SocialLinkButton(url: String, icon: @Composable () -> Unit) {
     LinkButton(
         url,
         modifier =  SocialLinkStyle.toModifier()
@@ -70,3 +70,5 @@ private fun SocialLinkButton(url: String, icon: @Composable () -> Unit) {
         icon()
     }
 }
+
+

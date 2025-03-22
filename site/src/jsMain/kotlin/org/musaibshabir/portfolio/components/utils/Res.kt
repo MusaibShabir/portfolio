@@ -18,7 +18,7 @@ object Res {
         const val NAME = "Musaib Shabir"
         const val SUB_HEADLINE = "A Professional Kotlin & Android Developer"
         const val RESUME = "Resume"
-        const val MY_WORK = "My Work"
+        const val EMAIL = "Email"
 
         const val ABOUT_ME_TITLE = "About me"
         const val ABOUT_ME_TEXT = "I am a Computer Science Engineering graduate with a strong passion for technology, " +
