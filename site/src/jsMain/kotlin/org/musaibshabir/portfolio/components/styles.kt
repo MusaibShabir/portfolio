@@ -6,10 +6,12 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.animation.Keyframes
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.extendedBy
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.vh
+import org.musaibshabir.portfolio.components.styles.SectionContainerStyle
 
 
 val UserNameStyle = CssStyle {
@@ -55,12 +57,25 @@ val HeroContainerKeyFrames = Keyframes {
     }
 }
 
+val AboutContainerKeyFrames = Keyframes {
+    0.percent {
+        Modifier
+            .translateY((40).px)
+            .opacity(0)
+    }
+    100.percent {
+        Modifier
+            .opacity(1)
+    }
+}
+
 
 
 
 val SectionTitleStyle = CssStyle {
     base {
-        Modifier.fontSize(FontSize.Large)
+        Modifier
+            .fontSize(FontSize.Large)
     }
     Breakpoint.SM {
         Modifier.fontSize(FontSize.Large)
@@ -75,7 +90,31 @@ val SectionTitleStyle = CssStyle {
 
 val SectionDescriptionStyle = CssStyle {
     base {
-        Modifier.fontSize(FontSize.XSmall)
+        Modifier.fontSize(FontSize.XXLarge)
+            .margin(topBottom = 0.75.cssRem)
+    }
+    Breakpoint.SM {
+        Modifier.fontSize(FontSize.Small)
+            .margin(topBottom = 0.75.cssRem)
+    }
+    Breakpoint.MD {
+        Modifier.fontSize(FontSize.XXLarge)
+            .margin(topBottom = 1.cssRem)
+    }
+    Breakpoint.LG {
+        Modifier.fontSize(FontSize.XXLarge)
+            .margin(topBottom = 2.cssRem)
+    }
+
+    Breakpoint.XL {
+        Modifier.fontSize(FontSize.Large)
+            .margin(topBottom = 2.cssRem)
+    }
+}
+
+val AboutDiscriptionStyle = CssStyle {
+    base {
+        Modifier.fontSize(FontSize.Medium)
             .margin(topBottom = 0.75.cssRem)
     }
     Breakpoint.SM {
@@ -84,10 +123,15 @@ val SectionDescriptionStyle = CssStyle {
     }
     Breakpoint.MD {
         Modifier.fontSize(FontSize.Medium)
-            .margin(topBottom = 1.cssRem)
+            .margin(topBottom = 2.cssRem)
     }
     Breakpoint.LG {
         Modifier.fontSize(FontSize.Large)
+            .margin(topBottom = 2.cssRem)
+    }
+
+    Breakpoint.XL {
+        Modifier.fontSize(FontSize.Larger)
             .margin(topBottom = 2.cssRem)
     }
 }

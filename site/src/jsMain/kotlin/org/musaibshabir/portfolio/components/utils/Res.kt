@@ -21,11 +21,13 @@ object Res {
         const val MY_WORK = "My Work"
 
         const val ABOUT_ME_TITLE = "About me"
-        const val ABOUT_ME_TEXT = "I’m a Computer Science Engineering graduate with a strong passion for technology, problem-solving, and innovation. " +
-                "I specialize in Modern Android development using Kotlin, & Jetpack Compose. " +
-                "My interests extend to Deep learning, and Artificial Intelligence. Beyond coding, " +
-                "I’m fascinated by Cosmos and always eager to learn more about the universe, its mysteries, and the science behind it. " +
-                "Constantly exploring new ideas and building solutions that make an impact \uD83D\uDE0A"
+        const val ABOUT_ME_TEXT = "I am a Computer Science Engineering graduate with a strong passion for technology, " +
+                "problem-solving, and innovation. I specialize in modern Android development using Kotlin and Jetpack Compose, " +
+                "ensuring seamless and efficient user experiences. My interests extend to deep learning and artificial intelligence, " +
+                "where I explore advancements to build intelligent and scalable solutions. Beyond coding, " +
+                "I am fascinated by the cosmos and constantly seek to learn more about the universe, its mysteries, " +
+                "and the science behind it. " +
+                "I am always eager to explore new ideas and develop solutions that make a meaningful impact. \uD83D\uDE0A"
 
 
         const val EXPERIENCE_TITLE = "Work Experience."
@@ -45,7 +47,8 @@ object Res {
 
     object Images {
         const val BACKGROUND_CIRCLES = "images/background_circles.svg"
-        const val PORTAL_STAR = "images/portal_star.svg"
+        const val PORTAL_STAR_LIGHT = "images/portal_star_light.svg"
+        const val PORTAL_STAR_DARK = "images/portal_star_dark.svg"
         const val NAVIGATION_ARROW = "images/Navigation_Arrow.svg"
         const val CUSTOM_CURSOR_DARK = "images/Custom_Cursor_Dark.svg"
         const val CUSTOM_CURSOR_LIGHT = "images/Custom_Cursor_Light.svg"

@@ -1,6 +1,7 @@
 package org.musaibshabir.portfolio.components.sections.skills.style
 
 import com.varabyte.kobweb.compose.ui.Modifier
+import com.varabyte.kobweb.compose.ui.modifiers.height
 import com.varabyte.kobweb.compose.ui.modifiers.maxWidth
 import com.varabyte.kobweb.compose.ui.modifiers.minHeight
 import com.varabyte.kobweb.silk.style.CssStyle
@@ -13,7 +14,7 @@ val SkillsSectionStyle = CssStyle {
     val colorPalette = colorMode.toPalette()
     base {
         Modifier
-            .minHeight(30.vh)
+            .height(30.vh)
     }
     Breakpoint.ZERO {
         Modifier

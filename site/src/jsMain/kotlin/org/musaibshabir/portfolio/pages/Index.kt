@@ -30,7 +30,7 @@ fun HomePage() {
 
             About()
 
-            Skills()
+            //Skills()
         }
     }
 

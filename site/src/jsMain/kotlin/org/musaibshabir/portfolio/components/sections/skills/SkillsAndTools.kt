@@ -25,6 +25,7 @@ import org.jetbrains.compose.web.css.px
 import org.musaibshabir.portfolio.components.ExperienceStyle
 import org.musaibshabir.portfolio.components.models.Skill
 import org.musaibshabir.portfolio.components.sections.skills.style.SkillsSectionStyle
+import org.musaibshabir.portfolio.components.styles.SectionContainerStyle
 import org.musaibshabir.portfolio.components.utils.Res
 import org.musaibshabir.portfolio.components.widgets.SectionTitle
 import org.musaibshabir.portfolio.theme.font.SkillProficiencyTextStyle
@@ -33,7 +34,7 @@ import org.musaibshabir.portfolio.theme.font.SkillTextStyle
 @Composable
 fun Skills() {
     Column(
-        modifier = ExperienceStyle.toModifier().id("skills_and_tools"),
+        modifier = SectionContainerStyle.toModifier().id("skills_and_tools"),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
