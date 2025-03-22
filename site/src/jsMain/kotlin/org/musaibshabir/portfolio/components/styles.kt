@@ -122,16 +122,16 @@ val AboutDiscriptionStyle = CssStyle {
             .margin(topBottom = 0.75.cssRem)
     }
     Breakpoint.MD {
-        Modifier.fontSize(FontSize.Medium)
+        Modifier.fontSize(FontSize.Small)
             .margin(topBottom = 2.cssRem)
     }
     Breakpoint.LG {
-        Modifier.fontSize(FontSize.Large)
+        Modifier.fontSize(FontSize.Medium)
             .margin(topBottom = 2.cssRem)
     }
 
     Breakpoint.XL {
-        Modifier.fontSize(FontSize.Larger)
+        Modifier.fontSize(FontSize.Large)
             .margin(topBottom = 2.cssRem)
     }
 }

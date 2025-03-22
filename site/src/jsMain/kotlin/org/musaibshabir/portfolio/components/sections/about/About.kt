@@ -5,9 +5,11 @@ import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
+import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.columnGap
 import com.varabyte.kobweb.compose.ui.modifiers.lineHeight
 import com.varabyte.kobweb.compose.ui.modifiers.opacity
+import com.varabyte.kobweb.compose.ui.modifiers.rowGap
 import com.varabyte.kobweb.compose.ui.modifiers.textAlign
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
@@ -35,9 +37,6 @@ fun About() {
 
         SectionTitle(Res.Constants.ABOUT_ME_TITLE)
 
-
-        //TypingEffectText(fullText = Res.Constants.ABOUT_ME_TEXT)
-
         SpanText(
             text = Res.Constants.ABOUT_ME_TEXT,
             modifier = AboutDiscriptionStyle.toModifier()
@@ -47,7 +46,9 @@ fun About() {
         )
 
         SimpleGrid(
-            modifier = SkillsSectionStyle.toModifier().columnGap(60.px)
+            modifier = Modifier
+                .columnGap(60.px)
+                .rowGap(32.px)
             ,
             numColumns = numColumns(base = 2, md = 5, lg = 5)
         ) {
@@ -63,30 +64,3 @@ fun About() {
     }
 
 }
-
-@Composable
-fun TypingEffectText(fullText: String, typingSpeed: Long = 3L) {
-    var displayedText by remember { mutableStateOf("") }
-    var alpha by remember { mutableStateOf(0f) }
-
-    LaunchedEffect(fullText) {
-        displayedText = ""
-        alpha = 0f
-        delay(300L)
-
-        for (i in fullText.indices) {
-            displayedText = fullText.substring(0, i + 1)
-            alpha = min(1f, alpha + 0.05f)
-            delay(typingSpeed)
-        }
-    }
-
-    SpanText(
-        text = displayedText,
-        modifier = AboutDiscriptionStyle.toModifier()
-            .textAlign(TextAlign.Justify)
-            .lineHeight(2)
-            .opacity(alpha)
-    )
-}
-
