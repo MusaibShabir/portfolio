@@ -87,8 +87,21 @@ fun Footer(modifier: Modifier = Modifier) {
 
             Row (
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.End
+                horizontalArrangement = Arrangement.End,
+                verticalAlignment = Alignment.CenterVertically
             ){
+
+                FaLocationDot(
+                    modifier = Modifier
+                        .padding(right = .5.cssRem)
+                        .color(
+                            when (ColorMode.current) {
+                                ColorMode.LIGHT -> Colors.Gray
+                                ColorMode.DARK -> Colors.LightGray
+                            }
+                        )
+                )
+
                 SpanText(
                     text = "Srinagar J&K",
                     modifier = Modifier
@@ -197,16 +210,16 @@ fun DeveloperLocation() {
         horizontalArrangement = Arrangement.Start
     ){
 
-//        FaLocationArrow(
-//            modifier = Modifier
-//                .padding(right = .5.cssRem)
-//                .color(
-//                    when (ColorMode.current) {
-//                        ColorMode.LIGHT -> Colors.Gray
-//                        ColorMode.DARK -> Colors.LightGray
-//                    }
-//                )
-//        )
+        FaLocationArrow(
+            modifier = Modifier
+                .padding(right = .5.cssRem)
+                .color(
+                    when (ColorMode.current) {
+                        ColorMode.LIGHT -> Colors.Gray
+                        ColorMode.DARK -> Colors.LightGray
+                    }
+                )
+        )
         SpanText(
             text = "Srinagar J&K India 190010",
             modifier = Modifier
