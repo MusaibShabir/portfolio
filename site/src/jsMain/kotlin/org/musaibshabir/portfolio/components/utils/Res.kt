@@ -5,12 +5,26 @@ import com.varabyte.kobweb.compose.ui.graphics.Color
 object Res {
 
     object Constants {
-        const val RESUME_URL = "https://drive.google.com/file/d/11M1RPYv3xNdwc88zEVvHVPVSrb5G9Fna/view?usp=drive_link"
-        const val LINKEDIN_URL = "https://www.linkedin.com/in/binayshaw7777/"
+
         const val GITHUB_URL = "https://github.com/binayshaw7777"
+        const val LINKEDIN_URL = "https://www.linkedin.com/in/binayshaw7777/"
         const val TWITTER_URL = "https://twitter.com/binayplays7777"
-        const val MEDIUM_URL = "https://medium.com/@binayshaw7777"
-        const val MAIL_TO = "mailto:binayshaw7777@gmail.com"
+        const val HACKER_RANK_URL = "https://twitter.com/binayplays7777"
+        const val MEDIUM_URL = "https://twitter.com/binayplays7777"
+        const val MAIL_TO = "mailto:itzmusaibshabir@gmail.com"
+
+        const val RESUME_URL = "https://drive.google.com/file/d/11M1RPYv3xNdwc88zEVvHVPVSrb5G9Fna/view?usp=drive_link"
+
+
+
+        const val SLACK_URL = "https://kotlinlang.slack.com/team/U07E4NQ32JJ"
+        const val DISCORD_URL = "https://medium.com/@binayshaw7777"
+        const val WHATSAPP_URL = "https://wa.me/qr/YSOCVLJKQJMIN1"
+        const val TELEGRAM_URL = "https://medium.com/@binayshaw7777"
+        const val INSTAGRAM_URL = "https://www.instagram.com/musaib.shabir/"
+
+
+
         const val PROJECT_READBUD_URL = "https://github.com/binayshaw7777/ReadBud"
 
 
@@ -44,6 +58,8 @@ object Res {
         const val PROJECT_REPOSITORIES_URL = "https://github.com/binayshaw7777?tab=repositories"
         const val MORE_ON_GITHUB = "More on GitHub."
     }
+
+
 
     object Images {
         const val BACKGROUND_CIRCLES = "images/background_circles.svg"

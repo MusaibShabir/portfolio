@@ -1,7 +1,6 @@
 package org.musaibshabir.portfolio.components.sections
 
 import androidx.compose.runtime.*
-import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
@@ -13,7 +12,6 @@ import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.forms.Button
 import com.varabyte.kobweb.silk.components.forms.ButtonSize
 import com.varabyte.kobweb.silk.components.icons.fa.*
-import com.varabyte.kobweb.silk.components.layout.HorizontalDivider
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.base
@@ -21,6 +19,7 @@ import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import kotlinx.coroutines.delay
 import org.jetbrains.compose.web.css.cssRem
+import org.jetbrains.compose.web.css.keywords.auto
 import org.jetbrains.compose.web.css.percent
 import org.musaibshabir.portfolio.components.sections.home.components.SocialLinkButton
 import org.musaibshabir.portfolio.components.styles.MainButtonStyle
@@ -42,10 +41,11 @@ fun Footer(modifier: Modifier = Modifier) {
         modifier = FooterStyle.toModifier()
             .fillMaxWidth()
     ){
+
         Row (
             modifier = modifier
                 .fillMaxWidth()
-                .padding { bottom(3.cssRem) },
+                .padding { bottom(2.cssRem) },
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ){
@@ -54,12 +54,12 @@ fun Footer(modifier: Modifier = Modifier) {
             val currentPalette = ColorMode.current.toSitePalette()
             Button(
                 onClick = {
-                    ctx.router.navigateTo(Res.Constants.RESUME_URL)
+                    ctx.router.navigateTo(Res.Constants.MAIL_TO)
                 },
                 size = ButtonSize.MD,
                 modifier = MainButtonStyle.toModifier()
                     .background(currentPalette.buttonBackground)
-                //.width(120.px)
+
             ) {
                 SpanText(
                     text = Res.Constants.EMAIL,
@@ -77,7 +77,7 @@ fun Footer(modifier: Modifier = Modifier) {
         }
 
         Row (
-            modifier = modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ){
@@ -85,21 +85,52 @@ fun Footer(modifier: Modifier = Modifier) {
             CopyrightInfo()
 
 
-            Column (
-                modifier = modifier
-                    .width(23.cssRem),
-                horizontalAlignment = Alignment.CenterHorizontally
+            Row (
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.End
             ){
-                TimeDisplay(timeZone = "Asia/Kolkata")
-                HorizontalDivider()
-                DeveloperLocation()
+                SpanText(
+                    text = "Srinagar J&K",
+                    modifier = Modifier
+                        .width(auto)
+                        .color(
+                            when (ColorMode.current) {
+                                ColorMode.LIGHT -> Colors.Gray
+                                ColorMode.DARK -> Colors.LightGray
+                            }
+                        )
+                )
 
+                SpanText(
+                    text = "|",
+                    modifier = Modifier
+                        .padding { leftRight(.5.cssRem) }
+                )
+                TimeDisplay(timeZone = "Asia/Kolkata")
             }
+
 
 
         }
 
+
+
     }
+}
+
+@Composable
+fun DeveloperLocationInfo() {
+
+    Row (
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.End,
+    ){
+
+        DeveloperLocation()
+
+
+    }
+
 }
 
 @Composable
@@ -140,8 +171,8 @@ fun TimeDisplay(timeZone: String) {
     SpanText(
         text = currentTime,
         modifier = Modifier
-            .fillMaxWidth()
-            .textAlign(TextAlign.Center)
+            .width(8.cssRem)
+            //.textAlign(TextAlign.End)
             .color(
                 when (ColorMode.current) {
                     ColorMode.LIGHT -> Colors.Gray
@@ -163,19 +194,19 @@ fun DeveloperLocation() {
     Row (
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.Center
+        horizontalArrangement = Arrangement.Start
     ){
 
-        FaLocationArrow(
-            modifier = Modifier
-                .padding(right = .5.cssRem)
-                .color(
-                    when (ColorMode.current) {
-                        ColorMode.LIGHT -> Colors.Gray
-                        ColorMode.DARK -> Colors.LightGray
-                    }
-                )
-        )
+//        FaLocationArrow(
+//            modifier = Modifier
+//                .padding(right = .5.cssRem)
+//                .color(
+//                    when (ColorMode.current) {
+//                        ColorMode.LIGHT -> Colors.Gray
+//                        ColorMode.DARK -> Colors.LightGray
+//                    }
+//                )
+//        )
         SpanText(
             text = "Srinagar J&K India 190010",
             modifier = Modifier
@@ -197,24 +228,25 @@ fun ContactLinksRow() {
         modifier = Modifier
             .borderRadius(1.cssRem)
     ) {
-        SocialLinkButton(
-            "phone:+917889816656"
-        ) { FaPhone(size = IconSize.XL) }
 
         SocialLinkButton(
-            "https://x.com/musaib_shabir"
+            Res.Constants.SLACK_URL
         ) { FaSlack(size = IconSize.XL) }
 
         SocialLinkButton(
-            "https://www.hackerrank.com/profile/musaibshabir"
+            Res.Constants.DISCORD_URL
         ) { FaDiscord(size = IconSize.XL) }
 
         SocialLinkButton(
-            "https://medium.com/@musaib.shabir"
+            Res.Constants.WHATSAPP_URL
         ) { FaWhatsapp(size = IconSize.XL) }
 
         SocialLinkButton(
-            "https://www.linkedin.com/in/musaibshabir"
+            Res.Constants.TELEGRAM_URL
         ) { FaTelegram(size = IconSize.XL) }
+
+        SocialLinkButton(
+            Res.Constants.INSTAGRAM_URL
+        ) { FaInstagram(size = IconSize.XL) }
     }
 }
